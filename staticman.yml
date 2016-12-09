@@ -7,7 +7,7 @@ books:
   #
   # Names of the fields the form is allowed to submit. If a field that is
   # not here is part of the request, an error will be thrown.
-  allowedFields: ["title", "tagline", "url", "email"]
+  allowedFields: ["layout", "category", "title", "tagline", "url", "email"]
 
   # (*) REQUIRED WHEN USING NOTIFICATIONS
   #
