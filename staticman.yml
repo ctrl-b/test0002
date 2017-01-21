@@ -40,7 +40,7 @@ books:
     date:
       type: date
       options:
-        format: "timestamp-seconds"
+        format: "YYYY-MM-DD HH:MM:SS -0500"
 
   # Whether entries need to be appproved before they are published to the main
   # branch. If set to `true`, a pull request will be created for your approval.
