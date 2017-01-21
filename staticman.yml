@@ -39,7 +39,7 @@ books:
   generatedFields:
     date:
       type: date
-        options:
+      options:
         format: "YYYY-MM-DDTHH:mm:ssZ"
 
   # Whether entries need to be appproved before they are published to the main
