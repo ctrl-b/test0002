@@ -95,7 +95,7 @@ watch:
         format: "iso8601"
   moderation: true
   name: "ualgo.ca"
-  path: "submissions/watch/{options.slug}"
+  path: "watch/{options.slug}"
   requiredFields: ["title", "tagline", "link", "section", "tags"]
   transforms:
     email: md5
