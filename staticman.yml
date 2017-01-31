@@ -81,3 +81,22 @@ books:
   transforms:
     email: md5
     excerpt: "frontmatterContent"
+
+watch:
+  allowedFields: ["title", "tagline", "link", "image", "section", "tags", "name", "email", "twitter"]
+  branch: "books"
+  commitMessage: "New submission: {options.title}."
+  filename: "watch-{@timestamp}"
+  format: "frontmatter"
+  generatedFields:
+    date:
+      type: date
+      options:
+        format: "iso8601"
+  moderation: true
+  name: "ualgo.ca"
+  path: "submissions/watch/{options.slug}"
+  requiredFields: ["title", "tagline", "link", "section", "tags"]
+  transforms:
+    email: md5
+
