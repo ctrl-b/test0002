@@ -85,7 +85,7 @@ books:
 watch:
   allowedFields: ["title", "tagline", "link", "image", "section", "tags", "name", "email", "twitter"]
   branch: "books"
-  commitMessage: "New submission: {options.title}."
+  commitMessage: "New submission"
   filename: "watch-{@timestamp}"
   format: "frontmatter"
   generatedFields:
