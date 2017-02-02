@@ -21,7 +21,7 @@ read:
   # Name of the branch being used. Must match the one sent in the URL of the
   # request.
   branch: "books"
-  commitMessage: "New submission."
+  commitMessage: "New submission on read"
 
   # (*) REQUIRED
   #
