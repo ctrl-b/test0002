@@ -21,7 +21,7 @@ read:
   # Name of the branch being used. Must match the one sent in the URL of the
   # request.
   branch: "books"
-  commitMessage: "New submission on read, {fields.title}"
+  commitMessage: "New submission on read"
 
   # (*) REQUIRED
   #
@@ -117,7 +117,7 @@ learn:
   transforms:
     email: md5
 listen:
-  allowedFields: ["title", "tagline", "link", "image", "section", "type", "tags", "name", "email", "twitter"]
+  allowedFields: ["title", "tagline", "link", "image", "audio", "section", "type", "tags", "name", "email", "twitter"]
   branch: "books"
   commitMessage: "New submission on listen"
   filename: "{options.submitdate}-{options.dashedtitle}"
