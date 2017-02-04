@@ -7,7 +7,7 @@ read:
   #
   # Names of the fields the form is allowed to submit. If a field that is
   # not here is part of the request, an error will be thrown.
-  allowedFields: ["title", "tagline", "link", "image", "section", "tags", "excerpt", "name", "email", "twitter"]
+  allowedFields: ["title", "tagline", "link", "image", "section", "type", "tags", "excerpt", "name", "email", "twitter"]
 
   # (*) REQUIRED WHEN USING NOTIFICATIONS
   #
@@ -83,7 +83,7 @@ read:
     excerpt: "frontmatterContent"
 
 watch:
-  allowedFields: ["title", "tagline", "link", "image", "section", "tags", "name", "email", "twitter"]
+  allowedFields: ["title", "tagline", "link", "image", "section", "type", "tags", "name", "email", "twitter"]
   branch: "books"
   commitMessage: "New submission on watch"
   filename: "{options.submitdate}-{options.dashedtitle}"
@@ -100,7 +100,7 @@ watch:
   transforms:
     email: md5
 learn:
-  allowedFields: ["title", "tagline", "link", "image", "section", "tags", "name", "email", "twitter"]
+  allowedFields: ["title", "tagline", "link", "image", "section", "type", "tags", "name", "email", "twitter"]
   branch: "books"
   commitMessage: "New submission on learn"
   filename: "{options.submitdate}-{options.dashedtitle}"
@@ -117,7 +117,7 @@ learn:
   transforms:
     email: md5
 listen:
-  allowedFields: ["title", "tagline", "link", "image", "section", "tags", "name", "email", "twitter"]
+  allowedFields: ["title", "tagline", "link", "image", "section", "type", "tags", "name", "email", "twitter"]
   branch: "books"
   commitMessage: "New submission on listen"
   filename: "{options.submitdate}-{options.dashedtitle}"
@@ -130,11 +130,11 @@ listen:
   moderation: true
   name: "uxhub.io"
   path: "listen"
-  requiredFields: ["title", "tagline", "link", "image", "section", "tags", "email"]
+  requiredFields: ["title", "tagline", "link", "image", "section", "type", "tags", "email"]
   transforms:
     email: md5
 tools:
-  allowedFields: ["title", "tagline", "link", "image", "section", "tags", "excerpt", "name", "email", "twitter"]
+  allowedFields: ["title", "tagline", "link", "image", "section", "type", "tags", "excerpt", "name", "email", "twitter"]
   branch: "books"
   commitMessage: "New submission on learn"
   filename: "{options.submitdate}-{options.dashedtitle}"
@@ -151,7 +151,7 @@ tools:
   transforms:
     email: md5
 events:
-  allowedFields: ["title", "tagline", "link", "image", "section", "tags", "excerpt", "name", "email", "twitter"]
+  allowedFields: ["title", "tagline", "link", "image", "section", "type", "tags", "excerpt", "name", "email", "twitter"]
   branch: "books"
   commitMessage: "New event"
   filename: "{options.submitdate}-{options.dashedtitle}"
