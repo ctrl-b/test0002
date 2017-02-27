@@ -15,13 +15,14 @@ read:
   # listed will be accepted. The origin is sent as part as the `options` object
   # (e.g. <input name="options[origin]" value="http://yourdomain.com/post1")
   #allowedOrigins: ["localhost", "uxhub.io"]
+  #allowedOrigins: ["uxhub.io"]
 
   # (*) REQUIRED
   #
   # Name of the branch being used. Must match the one sent in the URL of the
   # request.
-  branch: "books"
-  commitMessage: "New submission on read"
+  branch: "master"
+  commitMessage: "New submission on read - {fields.title}"
 
   # (*) REQUIRED
   #
@@ -83,9 +84,10 @@ read:
     excerpt: "frontmatterContent"
 
 watch:
-  allowedFields: ["title", "tagline", "link", "image", "section", "type", "tags", "name", "email", "twitter"]
-  branch: "books"
-  commitMessage: "New submission on watch"
+  allowedFields: ["title", "tagline", "link", "image", "section", "type", "tags", "excerpt", "name", "email", "twitter"]
+  #allowedOrigins: ["uxhub.io"]
+  branch: "master"
+  commitMessage: "New submission on watch - {fields.title}"
   filename: "{options.submitdate}-{options.dashedtitle}"
   format: "frontmatter"
   generatedFields:
@@ -96,13 +98,15 @@ watch:
   moderation: true
   name: "uxhub.io"
   path: "watch"
-  requiredFields: ["title", "tagline", "link", "section", "tags"]
+  requiredFields: ["title", "tagline", "link", "section", "tags", "email"]
   transforms:
     email: md5
+    excerpt: "frontmatterContent"
 learn:
-  allowedFields: ["title", "tagline", "link", "image", "section", "type", "tags", "name", "email", "twitter"]
-  branch: "books"
-  commitMessage: "New submission on learn"
+  allowedFields: ["title", "tagline", "link", "image", "section", "type", "tags", "excerpt", "name", "email", "twitter"]
+  #allowedOrigins: ["uxhub.io"]
+  branch: "master"
+  commitMessage: "New submission on learn - {fields.title}"
   filename: "{options.submitdate}-{options.dashedtitle}"
   format: "frontmatter"
   generatedFields:
@@ -117,9 +121,10 @@ learn:
   transforms:
     email: md5
 listen:
-  allowedFields: ["title", "tagline", "link", "image", "audio", "section", "type", "tags", "name", "email", "twitter"]
-  branch: "books"
-  commitMessage: "New submission on listen"
+  allowedFields: ["title", "tagline", "link", "image", "section", "type", "audio", "excerpt", "tags", "name", "email", "twitter"]
+  #allowedOrigins: ["uxhub.io"]
+  branch: "master"
+  commitMessage: "New submission on listen - {fields.title}"
   filename: "{options.submitdate}-{options.dashedtitle}"
   format: "frontmatter"
   generatedFields:
@@ -130,13 +135,15 @@ listen:
   moderation: true
   name: "uxhub.io"
   path: "listen"
-  requiredFields: ["title", "tagline", "link", "image", "section", "type", "tags", "email"]
+  requiredFields: ["title", "tagline", "link", "image", "section", "tags", "email"]
   transforms:
     email: md5
+    excerpt: "frontmatterContent"
 tools:
   allowedFields: ["title", "tagline", "link", "image", "section", "type", "tags", "excerpt", "name", "email", "twitter"]
-  branch: "books"
-  commitMessage: "New submission on learn"
+  #allowedOrigins: ["uxhub.io"]
+  branch: "master"
+  commitMessage: "New submission on learn - {fields.title}"
   filename: "{options.submitdate}-{options.dashedtitle}"
   format: "frontmatter"
   generatedFields:
@@ -150,10 +157,12 @@ tools:
   requiredFields: ["title", "tagline", "link", "image", "section", "tags", "email"]
   transforms:
     email: md5
+    excerpt: "frontmatterContent"
 events:
   allowedFields: ["title", "tagline", "link", "image", "section", "type", "tags", "excerpt", "name", "email", "twitter"]
-  branch: "books"
-  commitMessage: "New event"
+  #allowedOrigins: ["uxhub.io"]
+  branch: "master"
+  commitMessage: "New event - {fields.title}"
   filename: "{options.submitdate}-{options.dashedtitle}"
   format: "frontmatter"
   generatedFields:
@@ -167,3 +176,4 @@ events:
   requiredFields: ["title", "tagline", "link", "image", "section", "tags", "email"]
   transforms:
     email: md5
+    excerpt: "frontmatterContent"
