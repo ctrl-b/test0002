@@ -7,7 +7,7 @@ read:
   #
   # Names of the fields the form is allowed to submit. If a field that is
   # not here is part of the request, an error will be thrown.
-  allowedFields: ["title", "tagline", "link", "image", "section", "type", "tags", "excerpt", "name", "email", "twitter"]
+  allowedFields: ["title", "tagline", "link", "image", "section", "type", "tags", "content", "name", "email", "twitter"]
 
   # (*) REQUIRED WHEN USING NOTIFICATIONS
   #
@@ -81,7 +81,7 @@ read:
   # the name of the field and values are possible transformation types.
   transforms:
     email: md5
-    excerpt: "frontmatterContent"
+    content: "frontmatterContent"
 
 watch:
   allowedFields: ["title", "tagline", "link", "image", "section", "type", "tags", "excerpt", "name", "email", "twitter"]
