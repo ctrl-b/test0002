@@ -84,7 +84,7 @@ read:
     desc: "frontmatterContent"
 
 watch:
-  allowedFields: ["title", "tagline", "link", "image", "section", "type", "tags", "excerpt", "name", "email", "twitter"]
+  allowedFields: ["title", "tagline", "link", "image", "section", "type", "tags", "desc", "name", "email", "twitter"]
   #allowedOrigins: ["uxhub.io"]
   branch: "books"
   commitMessage: "New submission on watch - {fields.title}"
@@ -100,8 +100,8 @@ watch:
   path: "watch"
   requiredFields: ["title", "tagline", "link", "section", "tags", "email"]
   transforms:
-    email: md5
-    excerpt: "frontmatterContent"
+    email: "md5"
+    desc: "frontmatterContent"
 learn:
   allowedFields: ["title", "tagline", "link", "image", "section", "type", "tags", "excerpt", "name", "email", "twitter"]
   #allowedOrigins: ["uxhub.io"]
