@@ -7,7 +7,7 @@ read:
   #
   # Names of the fields the form is allowed to submit. If a field that is
   # not here is part of the request, an error will be thrown.
-  allowedFields: ["title", "tagline", "link", "image", "section", "type", "tags", "desc", "name", "email", "twitter"]
+  allowedFields: ["title", "tagline", "link", "image", "section", "type", "tags", "excerpt", "name", "email", "twitter"]
 
   # (*) REQUIRED WHEN USING NOTIFICATIONS
   #
@@ -81,10 +81,10 @@ read:
   # the name of the field and values are possible transformation types.
   transforms:
     email: "md5"
-    desc: "frontmatterContent"
+    excerpt: "frontmatterContent"
 
 watch:
-  allowedFields: ["title", "tagline", "link", "image", "section", "type", "tags", "desc", "name", "email", "twitter"]
+  allowedFields: ["title", "tagline", "link", "image", "section", "type", "tags", "excerpt", "name", "email", "twitter"]
   #allowedOrigins: ["uxhub.io"]
   branch: "books"
   commitMessage: "New submission on watch - {fields.title}"
@@ -101,7 +101,7 @@ watch:
   requiredFields: ["title", "tagline", "link", "section", "tags", "email"]
   transforms:
     email: "md5"
-    desc: "frontmatterContent"
+    excerpt: "frontmatterContent"
 learn:
   allowedFields: ["title", "tagline", "link", "image", "section", "type", "tags", "excerpt", "name", "email", "twitter"]
   #allowedOrigins: ["uxhub.io"]
@@ -119,7 +119,8 @@ learn:
   path: "learn"
   requiredFields: ["title", "tagline", "link", "section", "tags"]
   transforms:
-    email: md5
+    email: "md5"
+    excerpt: "frontmatterContent"
 listen:
   allowedFields: ["title", "tagline", "link", "image", "section", "type", "audio", "excerpt", "tags", "name", "email", "twitter"]
   #allowedOrigins: ["uxhub.io"]
@@ -137,13 +138,13 @@ listen:
   path: "listen"
   requiredFields: ["title", "tagline", "link", "image", "section", "tags", "email"]
   transforms:
-    email: md5
+    email: "md5"
     excerpt: "frontmatterContent"
 tools:
   allowedFields: ["title", "tagline", "link", "image", "section", "type", "tags", "excerpt", "name", "email", "twitter"]
   #allowedOrigins: ["uxhub.io"]
   branch: "books"
-  commitMessage: "New submission on learn - {fields.title}"
+  commitMessage: "New submission on tools - {fields.title}"
   filename: "{options.submitdate}-{options.dashedtitle}"
   format: "frontmatter"
   generatedFields:
@@ -157,7 +158,7 @@ tools:
   requiredFields: ["title", "tagline", "link", "image", "section", "tags", "email"]
   transforms:
     email: md5
-    excerpt: "frontmatterContent"
+    excerpt: frontmatterContent
 events:
   allowedFields: ["title", "tagline", "link", "image", "section", "type", "tags", "excerpt", "name", "email", "twitter"]
   #allowedOrigins: ["uxhub.io"]
@@ -175,5 +176,5 @@ events:
   path: "events"
   requiredFields: ["title", "tagline", "link", "image", "section", "tags", "email"]
   transforms:
-    email: md5
+    email: "md5"
     excerpt: "frontmatterContent"
