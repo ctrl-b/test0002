@@ -1,7 +1,7 @@
 comments:
   allowedFields: ["name", "email", "url", "message"]
   allowedOrigins: ["localhost"]
-  branch: "master"
+  branch: "books"
   commitMessage: "Add Staticman data"
   filename: "entry{@timestamp}"
   format: "yaml"
