@@ -3,7 +3,7 @@ comments:
   allowedOrigins: ["localhost"]
   branch: "books"
   commitMessage: "Add Staticman data"
-  filename: "entry{@timestamp}"
+  filename: "{options.date}-{options.dasheTitle}"
   format: "yaml"
   generatedFields:
     date:
