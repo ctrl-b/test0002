@@ -2,8 +2,8 @@ comments:
   allowedFields: ["title", "email", "url", "message"]
   allowedOrigins: ["localhost"]
   branch: "books"
-  commitMessage: "Add Staticman data"
-  filename: "{options.date}-{options.dasheTitle}"
+  commitMessage: "New: {fields.title}"
+  filename: "{options.date}-{options.dashTitle}"
   format: "yaml"
   generatedFields:
     date:
