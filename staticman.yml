@@ -1,5 +1,5 @@
 comments:
-  allowedFields: ["title", "email", "url", "message"]
+  allowedFields: ["title", "email", "url", "message", "dasheTitle", "date", "origin"]
   allowedOrigins: ["localhost"]
   branch: "books"
   commitMessage: "Add Staticman data"
