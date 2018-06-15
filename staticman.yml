@@ -13,7 +13,7 @@ comments:
   moderation: true
   name: "test.com"
   path: "_data/comments/"
-  requiredFields: ["url", "title", "section", "article"]
+  requiredFields: ["url", "title", "section", "type"]
   transforms:
     email: md5
 # Name of the property. You can have multiple properties with completely
