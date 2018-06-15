@@ -1,5 +1,5 @@
 comments:
-  allowedFields: ["title", "email", "url", "message"]
+  allowedFields: ["title", "email", "url", "message", "section", "type"]
   allowedOrigins: ["localhost"]
   branch: "books"
   commitMessage: "New: {fields.title}"
