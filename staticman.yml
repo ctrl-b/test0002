@@ -1,5 +1,5 @@
 comments:
-  allowedFields: ["title", "email", "url", "message", "section", "type"]
+  allowedFields: ["url", "title", "section", "type", "email", "tagline", "image", "tags", "message", "name", "twitter", "email"]
   allowedOrigins: ["localhost"]
   branch: "books"
   commitMessage: "New: {fields.title}"
@@ -13,7 +13,7 @@ comments:
   moderation: true
   name: "test.com"
   path: "_data/comments/"
-  requiredFields: ["url"]
+  requiredFields: ["url", "title", "section", "article"]
   transforms:
     email: md5
 # Name of the property. You can have multiple properties with completely
