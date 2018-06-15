@@ -4,7 +4,7 @@ comments:
   branch: "books"
   commitMessage: "New: {fields.title}"
   filename: "{options.date}-{options.dashTitle}"
-  format: "yaml"
+  format: "frontmatter"
   generatedFields:
     date:
       type: date
