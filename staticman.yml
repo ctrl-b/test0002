@@ -4,8 +4,7 @@ comments:
   branch: "books"
   commitMessage: "New: {fields.title}"
   filename: "{options.date}-{options.dashTitle}"
-  format: "yaml"
-  extension: "md"
+  format: "frontmatter"
   generatedFields:
     date:
       type: date
@@ -17,6 +16,7 @@ comments:
   requiredFields: ["url", "title", "section", "type"]
   transforms:
     email: md5
+    message: "frontmatterContent"
 # Name of the property. You can have multiple properties with completely
 # different config blocks for different sections of your site.
 # For example, you can have one property to handle comment submission and
